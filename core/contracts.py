@@ -21,3 +21,47 @@ RESOURCE_DATA_SCHEMA = {
     },
     "required" : ["id", "name", "year", "color", "pantone_value"]
 }
+
+CREATE_USER_SCHEME = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "job": {"type": "string"},
+        "id": {"type": "string"},
+    },
+    "required": ["id"]
+}
+
+UPDATE_USER_SCHEME = {
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "job": {"type": "string"},
+    },
+    "required": ["name", "job"]
+}
+
+REGISTERED_USER_SCHEME = {
+    "type": "object",
+    "properties": {
+        "id": {"type": "number"},
+        "token": {"type": "string"},
+    },
+    "required": ["id", "token"]
+}
+
+UNREGISTERED_USER_SCHEME = {
+    "type": "object",
+    "properties": {
+        "error": {"type": "string"},
+    },
+    "required": ["error"]
+}
+
+LOGINED_USER_SCHEME = {
+    "type": "object",
+    "properties": {
+        "token": {"type": "string"},
+    },
+    "required": ["token"]
+}
